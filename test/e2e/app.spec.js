@@ -41,4 +41,36 @@ describe('End to End Tests', () => {
         });
   });
 
+  it('should contain an input named principal', () => {
+      pageObject
+        .evaluate(() => document.querySelector('input[name=principal]'))
+        .then(input => expect(input).to.exist)
+  });
+
+  it('should contain an input named interest', () => {
+    pageObject
+      .evaluate(() => document.querySelector('input[name=interest]'))
+      .then(input => expect(input).to.exist)
+  });
+
+  it('should contain a select named term', () => {
+    pageObject
+      .evaluate(() => document.querySelector('select[name=term]'))
+      .then(input => expect(input).to.exist)
+  });
+
+  it('should contain a button with an id of calculate', () => {
+    pageObject
+      .evaluate(() => document.querySelector('button[id=calculate]'))
+      .then(element => expect(element).to.exist)
+  });
+
+  it('should contain a <p> element with an id of output', () => {
+    pageObject
+      .evaluate(() => document.querySelector('p[id=output]'))
+      .then(element => expect(element).to.exist)
+  });
+
+  
+
 })

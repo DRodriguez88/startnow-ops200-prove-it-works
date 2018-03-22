@@ -25,6 +25,6 @@ describe('Mortgage Calculator', () => {
     })
 
     it('should return 898.09', () => {
-        expect(mortgage.calculateMonthly()).to.equal(898.09)
+        expect(mortgage.monthlyPayment).to.equal(898.09)
     })
 });
